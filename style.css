@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    background: linear-gradient(120deg, #101013, #2000ff, #000000);
+    height: 100vh;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  .player {
+    background: #000;
+    width: 450px;
+    height: 730px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #289cff;
+    border-radius: 5px;
+    box-shadow: 1px 1px 30px #111, -1px -1px 30px #111;
+    overflow: hidden;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .icons {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+  
+  .icons a {
+    color: #289cff;
+    font-size: 1.2em;
+    transition: all 0.3s;
+  }
+  
+  .icons a:hover {
+    color: #fff;
+  }
+  
+  .img {
+    width: 80%;
+    margin: 20px auto;
+    transition: all 0.3s;
+    border-radius: 5px;
+  }
+
+  .title {
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .title h1 {
+    font-size: 2em;
+    margin: 0 0 10px 0;
+  }
+  
+  .title p {
+    color: #fff;
+    font-size: 1.1em;
+  }
+  
+  .time {
+    display: flex;
+  }
+  
+  .time .CurrTime {
+    flex: 50%;
+  }
+
+  .seek {
+    width: 100%;
+    height: 5px;
+    background: #289cff;
+    border-radius: 50px;
+  }
+  .seek .fill {
+    width: 0;
+    height: 5px;
+    background: #fff;
+    border-radius: 50px;
+  }
+  
+  .audio-btns {
+    width: 100%;
+    border-radius: 48%;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .audio-btns a:hover {
+    color: #aaa;
+  }
+  
+  .play-btns {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .play-btns a {
+    color: #fff;
+    margin: 0 20px;
+    font-size: 1.5em;
+    transition: all 0.5;
+  }
+  
+  .play-btns .play-pause {
+    padding: 13px 17px 12px 17px;
+    border-radius: 50%;
+    border: 2px solid #ffff;
+  }
+
+  .play-btns .backwards {   
+    border-radius: 50%;
+    border: 2px solid #ffff;
+    padding: 5px 10px 5px 5px;
+  }
+  
+  .play-btns .forward {   
+    border-radius: 50%;
+    border: 2px solid #ffff;
+    padding: 5px 5px 5px 10px;
+  }
+
+  .play-btns .repeatbtn{
+    font-size: 1.2em;
+  }
+  
+  .play-btns .randombtn{
+    font-size: 1.2em;
+  }
+
+   .repeatbtn :hover{
+    color: #289cff;
+  }
+
+  .randombtn :hover{
+    color: #289cff;
+  }
+
+  .repeatShuffle_btnactive{
+      color: #289cff;
+  }
+  
+  .audiocontrol{
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .fillcontainer .fill{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #289cff 0%, #fff 0%);
+    outline: none;
+    -webkit-transition: opacity .15s ease-in-out;
+    transition: opacity .15s ease-in-out;
+    margin-bottom: 10px;
+  }
+
+  .fill::after{
+    background: #289cff;
+  }
+
+  .fill::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 10px;
+    border-radius: 50%;
+    background: #289cff;
+    cursor: pointer;
+  }
+
+  .slidercontainer .slider{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #289cff 50%, #fff 50%);
+    outline: none;
+    -webkit-transition: opacity .15s ease-in-out;
+    transition: opacity .15s ease-in-out;
+    margin-bottom: 10px;
+  }
+
+  .slider::after{
+    background: #289cff;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 10px;
+    border-radius: 50%;
+    background: #289cff;
+    cursor: pointer;
+  }
+
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #289cff;
+    cursor: pointer;
+  }
+
+  .volumeup{
+    color:#fff;
+    font-size: x-large;
+  }
+  
+  .volumeup:hover{
+    color: #aaa;
+}
+
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 40px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 25px;
+  margin-left: 50px;
+}
+
+/* Close button animation */
+#closebutton{
+  transition: transform 0.2s;
+}
+
+#closebutton:hover{
+  transform: rotate(90deg);
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.menu{
+  list-style-type: none;
+}
+
+.menutitles{
+  color:#ffff;
+  margin-left: 10px;
+}
+
+.songs{
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.songs:hover{
+  cursor: pointer;
+}
